@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La McQueeneta | ¡Sabor a toda velocidad!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🏎️ La McQueeneta</h1>
+        <p>🏁 Sabores que ganan carreras 🏁</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#pedido">Mi carrito</a>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <h2>¡Bienvenido a La McQueeneta!</h2>
+        <p>Enciende tus motores y disfruta los snacks más rápidos.</p>
+        <a href="#menu" class="btn">VER MENÚ 🏁</a>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>🏆 NUESTRO MENÚ 🏆</h2>
+        <div class="productos">
+            <div class="producto">
+                <div class="emoji">🍗</div>
+                <h3>Alitas Turbo</h3>
+                <p>Deliciosas alitas con salsa a elegir.</p>
+                <div class="precio">$95 MXN</div>
+                <button class="btn" type="button" onclick="agregar('Alitas Turbo', 95)">Agregar al pedido</button>
+            </div>
+
+            <div class="producto">
+                <div class="emoji">🍟</div>
+                <h3>Papas Pistón</h3>
+                <p>Papas crujientes, doraditas y deliciosas.</p>
+                <div class="precio">$45 MXN</div>
+                <button class="btn" type="button" onclick="agregar('Papas Pistón', 45)">Agregar al pedido</button>
+            </div>
+
+            <div class="producto">
+                <div class="emoji">🍓</div>
+                <h3>Frappe Rayo Rojo</h3>
+                <p>Frappe de fresa, frío y cremoso.</p>
+                <div class="precio">$55 MXN</div>
+                <button class="btn" type="button" onclick="agregar('Frappe Rayo Rojo', 55)">Agregar al pedido</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pedido">
+        <h2>🛒 Mi carrito</h2>
+        <ul id="lista-carrito">
+            <li>Tu carrito está vacío.</li>
+        </ul>
+        <p class="total">Total: $<span id="total">0</span> MXN</p>
+        <div class="acciones">
+            <button class="boton" type="button" onclick="vaciarCarrito()">Vaciar carrito</button>
+            <button class="boton" type="button" onclick="enviarWhatsApp()">Pedir por WhatsApp</button>
+        </div>
+    </section>
+
+    <footer>
+        <h3>🏁 La McQueeneta 🏁</h3>
+        <p>¡ORDENA AHORA!</p>
+        <p>📲 ¡Búscanos en nuestras redes sociales o visítanos en nuestra sucursal!</p>
+        <p>📍 Av. 7 Pte. 910, Centro Histórico de Puebla, 72000, Heroica Puebla de Zaragoza, Pue.</p>
+        <p>🕐 Horario de atención: Martes de 10:00 AM a 11:30 AM.</p>
+        <div class="redes-sociales">
+            <a href="tel:+525661593571" class="boton llamar">Llamar ahora</a>
+            <a href="https://www.instagram.com/" class="boton instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/" class="boton facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://wa.me/525661593571" class="boton whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff1717, #9b0000);
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        header h1 {
+            font-size: 40px;
+            text-transform: uppercase;
+            font-style: italic;
+            text-shadow: 3px 3px black;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        nav {
+            background: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 20px;
+            background:
+                linear-gradient(#0009, #000b),
+                repeating-linear-gradient(
+                    45deg, #222 0, #222 10px,
+                    #333 10px, #333 20px
+                );
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffcc00;
+            color: #111;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .menu {
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .menu h2 {
+            color: #ff3333;
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(220px, 1fr)
+            );
+            gap: 22px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .producto {
+            background: #222;
+            border: 2px solid #444;
+            border-radius: 12px;
+            padding: 22px;
+            transition: 0.3s;
+        }
+
+        .producto:hover {
+            transform: translateY(-5px);
+            border-color: #ffcc00;
+        }
+
+        .emoji {
+            font-size: 65px;
+            margin-bottom: 12px;
+        }
+
+        .producto h3 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .producto p {
+            color: #ddd;
+            margin-bottom: 12px;
+        }
+
+        .precio {
+            font-size: 23px;
+            color: #ff3333;
+            font-weight: bold;
+            margin: 12px;
+        }
+
+        .producto button {
+            width: 100%;
+        }
+        
+/* Sección del carrito */
+#pedido {
+    background: linear-gradient(135deg, #1a1a1a, #303030);
+    color: white;
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: 900px;
+    border: 3px solid #e60000;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(230, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Título del carrito */
+#pedido h2 {
+    color: #ffcc00;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e60000;
+    padding-bottom: 15px;
+}
+
+/* Lista de productos */
+#lista-carrito {
+    list-style: none;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Cada producto */
+#lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: #252525;
+    border: 1px solid #444;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+#lista-carrito li:hover {
+    border-color: #ffcc00;
+    transform: translateX(4px);
+}
+
+/* Total de la compra */
+.total {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffcc00;
+    margin: 25px 0;
+}
+
+/* Contenedor de botones */
+.acciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Estilo general de botones */
+#pedido .boton {
+    padding: 13px 24px;
+    background: #e60000;
+    color: white;
+    border: 2px solid #ffcc00;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de los botones */
+#pedido .boton:hover {
+    background: #ffcc00;
+    color: #111;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(255, 204, 0, 0.3);
+}
+
+/* Botón para quitar un producto */
+#lista-carrito button {
+    background: #b00000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#lista-carrito button:hover {
+    background: #ff3333;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    #pedido {
+        padding: 25px 12px;
+        margin: 15px 10px;
+    }
+
+    #pedido h2 {
+        font-size: 24px;
+    }
+
+    #lista-carrito li {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .total {
+        font-size: 22px;
+    }
+
+    #pedido .boton {
+        width: 100%;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+}
+
+        
+
+        .carrito {
+            background: #1d1d1d;
+            margin: 25px auto;
+            padding: 25px;
+            max-width: 700px;
+            border-radius: 10px;
+            border: 2px solid #ffcc00;
+        }
+
+        .carrito h2 {
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
+
+        #lista-carrito {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+        #lista-carrito li {
+            padding: 8px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .total {
+            font-size: 23px;
+            margin: 15px 0;
+        }
+
+        .pedido {
+            display: block;
+            text-align: center;
+            background: #25d366;
+            color: white;
+            padding: 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        footer {
+            text-align: center;
+            background: #a90000;
+            padding: 22px;
+            margin-top: 30px;
+            border-top: 5px solid #ffcc00;
+        }
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón para llamar */
+.llamar {
+    background-color: #e60000;
+}
+
+/* Botón de Instagram */
+.instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+/* Botón de Facebook */
+.facebook {
+    background-color: #1877f2;
+}
+
+/* Botón de WhatsApp */
+.whatsapp {
+    background-color: #25d366;
+    color: #111;
+}
+
+/* Efecto al pasar el mouse */
+.boton:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(255, 0, 0, 0.4);
+    border-color: #ffcc00;
+}
+
+        @media (max-width: 500px) {
+            header h1 {
+                font-size: 29px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+        }
+    
